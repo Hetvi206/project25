@@ -21,14 +21,12 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
+	paper=new Paper(200,350,40);
 	ground = new Ground(width/2,570,width,20);
-
+	dustbin=new Dustbin(900,550,200,20); 
 	//line1=new Dustbin(800,520,20,100);
 	//line2=new Dustbin(1000,520,20,100);
-    dustbin=new Dustbin(900,550,200,20); 
-
-	paper=new Paper(200,350,40);
-
+	var render = Render.create({ element: document.body, engine: engine, options: { width: 1600, height: 700, wireframes: false } }); Engine.run(engine); Render.run(render);
 
 	Engine.run(engine);
   
